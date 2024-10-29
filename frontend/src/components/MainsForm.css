@@ -1,0 +1,560 @@
+
+.examform{
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 13px;
+    box-shadow: 0 0 5px #00000080;
+    align-items: center;
+    width: 34vw;
+    height: auto;
+    position: relative;
+    left:37vw;
+    top: 30vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+}
+.topicNameEC{
+    padding: 5px;
+}
+
+.modal, .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(49, 49, 49, 0.8);
+    z-index: 1000; 
+}
+.inputbtnflex{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+}
+.topic-entry {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.overlay {
+    background-color: rgba(49, 49, 49, 0.8);
+}
+
+.content_s {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0000004d;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    z-index: 1001; /* Ensure it's above the overlay */
+    width: 35vw; /* Adjust width as needed */
+    max-height: 80vh; /* Restrict height to 80% of viewport height */
+    overflow-y: auto; /* Add scrollbar if content exceeds max-height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.update,.delete {
+    width: fit-content;
+    height: fit-content;
+    padding: 6px;
+    color: #fff;
+    border: transparent;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 800;
+}
+.update{
+    background-color: #007bff;
+}
+.delete{
+    background-color: red;
+}
+.upddel{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+/* Close button styling */
+.closebutton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 1002; /* Ensure it's above other content in the modal */
+}
+/* Container for the selection table */
+.selections-table {
+    margin: 20px;
+    /* padding: 10px; */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Table styling */
+  .selections-table  {
+    width: 70%;
+    border-collapse: collapse;
+  }
+  .ECUploadForm{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+  }
+  #subject-select{
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .selections-table th, .selections-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .selections-table th {
+    background-color: #00222c;
+    color: #fff;
+    font-weight: bold;
+  }
+  .selections-table tr:nth-child(even) {
+    background-color:#f2f2f2; /* Light gray for odd rows */
+  }
+.conh{
+    background: #176bab;
+    color: #fff;
+    padding: 5px;
+    width: max-content;
+    font-size: 16PX;
+}
+td a{
+    background-color: #00222c;
+    color: #fff;
+    padding: 5px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+.redspan{
+    color: red;
+    font-size: 16px;
+    font-family: Roboto,sans-serif;
+}
+.conhh4{
+    font-size: 16PX;
+}
+.content_s{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0000004d;
+    position: fixed;
+    left:50vw;
+    top: 50vh;
+   transform: translate(-50%,-50%);
+    overflow: auto;
+    padding: 60px;
+    z-index: 999;
+    max-height: 80%;
+    max-width: 80%;
+ 
+}
+.btnes{
+    position: relative;
+    left:55%;
+    background-color: #00222c;
+    color: #fff;
+    font-size: larger;
+    padding: 10px;
+    border-radius: 10px;
+    top: 6vh;
+    cursor: pointer;
+}
+
+.selections-tablecontainer {
+   
+    margin-left: 15vw;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+.headerjee{
+    height:120px;
+    display: flex;
+    justify-content: space-between;
+    padding-left:10vw;
+   
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 7px 29px 0 #64646f33;
+}
+.headerjeem{
+    position: sticky; /* Fixed positioning for the sidebar */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.headerjee img{
+    height:95px;
+    width: 330px;
+}
+
+.jeeanchor{
+    position: relative;
+    bottom: 70px;
+    left: 90%;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+
+
+/* Sidebar styling */
+.sidebar {
+    height: 100vh; /* Full viewport height */
+    width: 15vw; /* Fixed width for the sidebar */
+    background-color:#00222c ; /* Dark background for the sidebar */
+    position: fixed; /* Fixed positioning for the sidebar */
+    top: 118px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    gap:4rem;
+    align-items: center; /* Center the buttons horizontally */
+   
+}
+
+/* Define styles for the active button */
+.sidebar button.active {
+    background-color: #007bff; /* Example color */
+    color: white; /* Example text color */
+    border: 1px solid #007bff; /* Example border color */
+  }
+  .examform button{
+    background: #00222c;
+    color: #fff;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 800;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  /* Optional: Define styles for buttons */
+  .sidebar  button {
+    background-color: #fff; /* Default button color */
+    font-weight: 700;
+    font-size: larger;
+    color: #000; /* Default text color */
+    padding: 10px 20px; /* Button padding */
+    margin: 5px; /* Space between buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 7px;
+  }
+  
+  select#exam {
+    margin-left: 2rem;
+}
+button.adc {
+    border-radius: 70%;
+    font-size: larger;
+    font-weight: bolder;
+    width:2rem
+ 
+}
+button.adc.remsec {
+    background: red;
+    
+    height: fit-content;
+}
+button.adc.addsec {
+    background: green;
+}
+ /* Basic styling for the custom dropdown */
+.dropdown {
+    border: 1px solid black;             
+    border-radius: 4px;       
+    padding: 10px;             
+    font-size: 14px;          
+    width: 200px;              
+    height: 40px;              
+    cursor: pointer;    
+    margin-left: 1.3rem;      
+}
+label{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+ option {
+    background-color: #fff; 
+    color: black;             
+    padding: 10px;            
+}
+
+
+.div1 {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.checkb{
+    font-weight: 400;
+    font-size: 14px;
+    color: #000;
+}
+.ECUploadFormh1 {
+    text-align: center;
+    text-decoration: underline;
+}
+.div1SubmitBtn{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-top: 30px;
+}
+.input {
+    width: 100%; 
+    max-width: 400px; 
+    padding: 10px; 
+    margin: 10px 0; 
+    border: 2px solid #ccc; 
+    border-radius: 5px;
+    font-size: 16px; 
+    color: #000;
+    font-weight: 400;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: border-color 0.3s, box-shadow 0.3s; 
+}
+.headerpageh1 {
+    background: #e0f8ff;
+    height: 8vh;
+    margin-left: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color: #fff; */
+}
+.headerpageh1 {
+    background: #e0f8ff;
+    height: 8vh;
+    margin-left: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color: #fff; */
+}
+input.search-bar {
+    width: 59vw;
+    height: 4vh;
+    border-radius: 13px;
+    padding-left: 30px;
+    font-size: larger;
+}
+/* Styling for the input box on focus */
+.input:focus {
+    border-color: #007bff; /* Border color on focus */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Shadow on focus */
+    outline: none; /* Remove default outline */
+}
+.dd2{
+    margin-left: 0.5rem;
+}
+.btngap{
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width:600px){
+    .examform{
+        width:450px;
+    }
+    .headerjee {
+        width: 100%;
+        padding-left: 10px;
+        
+    }
+    .headerjee img {
+        height: auto;
+        width: 250px;
+    }
+    .jeeanchor {
+        position: relative;
+        bottom: 70px;
+        left: 78%;
+        color: #000;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    .sidebar {
+        height: 100vh;
+        width: 22vw;
+        background-color: #00222c;
+        position: fixed;
+        top: 118px;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+        gap: 4rem;
+        align-items: center;
+    }
+    .sidebar  button {
+        background-color: #fff;
+        font-weight: 700;
+        font-size: large;
+        color: #000;
+        width: 70px;
+        padding: 10px 5px;
+        margin: 5px;
+        cursor: pointer;
+        border-radius: 7px;
+    }
+    .content_m {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #0000004d;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        z-index: 1001;
+        width: 92vw;
+        max-height: 80vh;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .selections-table {
+        display: block; /* Make the table block */
+        overflow-x: auto; /* Allow horizontal scrolling */
+      }
+    
+     
+      .selections-table {
+        width: 90%;
+        border-collapse: collapse;
+    }
+      .selections-table tr {
+       
+        padding: 10px;
+      }
+      .selections-tablecontainer {
+        margin-left: 22vw;
+        margin-top: 10vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .btnes {
+        position: relative;
+        left: 58%;
+    }
+    .headerpageh1 {
+        padding-left: 23px;
+    }
+      .selections-table td {
+        text-align: center;
+        padding: 5px;
+     
+        position: relative;
+      }
+    
+      .selections-table td::before {
+        content: attr(data-label); /* Use data-label for header */
+        position: absolute;
+        left: 10px;
+        top: 0;
+        font-weight: bold;
+       
+      }
+}
+ 
+@media (min-width:600px) and (max-width:768px){
+    .examform{
+        width: 70vw;
+    }
+ 
+}
+ 
+@media (min-width:768px) and (max-width:992px){
+    .content_m{
+        width: 70vw;
+        position: relative;
+        left: 52vw ;
+        display: flex;
+        align-items: center;
+    }
+    .dropdown {
+        border: 1px solid black;
+        border-radius: 4px;
+        padding: 10px;
+        font-size: 18px;
+        width: 200px;
+        height: 40px;
+        cursor: pointer;
+    }
+    label {
+        font-size: 23px;
+        font-weight: 700;
+    }
+    .examform h1 {
+      
+        font-size: 28px;
+        
+    }
+    .examform button {
+       
+        font-size: 20px;
+      
+    }
+    .headertv{
+        font-size: 23px; 
+    }
+    .checkb {
+        font-weight: 400;
+        font-size: 18px;
+        color: #000;
+    }
+    .btnes {
+        position: relative;
+        left: 79%;
+    }
+    
+ 
+}
+ 
+@media (min-width:992px) and (max-width:1200px){
+ 
+}
+ 
+@media (min-width:1200px){
+ 
+}
